@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Image from "next/image"; // Import the Image component
 import "../styles/globals.css";
 
 const CurrencyConverter = () => {
@@ -41,6 +42,7 @@ const CurrencyConverter = () => {
         setConvertedAmount(null);
       }
     } catch (error) {
+      console.error("API Error:", error); // Log the error
       alert("An error occurred while fetching the conversion.");
       setConvertedAmount(null);
     } finally {
@@ -138,9 +140,11 @@ const CurrencyConverter = () => {
             rel="noopener noreferrer"
             className="linkedin-link"
           >
-            <img
+            <Image
               src="/logo.webp"
               alt="LinkedIn Logo"
+              width={70}
+              height={70}
               className="linkedin-icon"
             />
           </a>
