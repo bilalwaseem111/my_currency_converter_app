@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 .env.local
+.next
+.env
+.DS_Store
 
 
 # testing
